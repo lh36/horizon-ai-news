@@ -1,0 +1,267 @@
+{
+  "version": "1.0",
+  "ai": {
+    "provider": "openai",
+    "model": "deepseek-chat",
+    "api_key_env": "DEEPSEEK_API_KEY",
+    "base_url": "https://api.deepseek.com",
+    "temperature": 0.3,
+    "max_tokens": 4096,
+    "throttle_sec": 0,
+    "analysis_concurrency": 4,
+    "enrichment_concurrency": 2,
+    "languages": ["zh", "en"]
+  },
+  "email": {
+    "enabled": false,
+    "smtp_server": "smtp.qq.com",
+    "smtp_port": 465,
+    "imap_server": "imap.qq.com",
+    "imap_port": 993,
+    "email_address": "placeholder@qq.com",
+    "sender_name": "Horizon Daily",
+    "subscribe_keyword": "SUBSCRIBE",
+    "unsubscribe_keyword": "UNSUBSCRIBE"
+  },
+  "sources": {
+    "rss": [
+      {
+        "name": "Simon Willison's Blog",
+        "url": "https://simonwillison.net/atom/everything/",
+        "enabled": true,
+        "category": "ai-tools"
+      },
+      {
+        "name": "Google DeepMind Blog",
+        "url": "https://blog.google/technology/ai/rss/",
+        "enabled": true,
+        "category": "ai-research"
+      },
+      {
+        "name": "Meta AI Blog",
+        "url": "https://ai.meta.com/blog/rss/",
+        "enabled": true,
+        "category": "ai-research"
+      },
+      {
+        "name": "MIT Tech Review - AI",
+        "url": "https://www.technologyreview.com/topic/artificial-intelligence/feed/",
+        "enabled": true,
+        "category": "ai-news"
+      },
+      {
+        "name": "ArXiv AI New Submissions",
+        "url": "https://rss.arxiv.org/rss/cs.AI",
+        "enabled": true,
+        "category": "ai-research"
+      },
+      {
+        "name": "ArXiv Machine Learning",
+        "url": "https://rss.arxiv.org/rss/cs.LG",
+        "enabled": true,
+        "category": "ai-research"
+      },
+      {
+        "name": "Lilian Weng (OpenAI)",
+        "url": "https://lilianweng.github.io/feed.xml",
+        "enabled": true,
+        "category": "ai-deep-dive"
+      },
+      {
+        "name": "Sebastian Raschka",
+        "url": "https://sebastianraschka.com/feed.xml",
+        "enabled": true,
+        "category": "ai-deep-dive"
+      },
+      {
+        "name": "Andrew Ng - The Batch",
+        "url": "https://www.deeplearning.ai/the-batch/feed/",
+        "enabled": true,
+        "category": "ai-news"
+      },
+      {
+        "name": "Stratechery by Ben Thompson",
+        "url": "https://stratechery.com/feed/",
+        "enabled": true,
+        "category": "ai-business"
+      },
+      {
+        "name": "The Verge - AI",
+        "url": "https://www.theverge.com/ai-artificial-intelligence/rss",
+        "enabled": true,
+        "category": "ai-news"
+      },
+      {
+        "name": "Hugging Face Blog",
+        "url": "https://huggingface.co/blog/feed.xml",
+        "enabled": true,
+        "category": "ai-open-source"
+      },
+      {
+        "name": "Interconnects (Nathan Lambert)",
+        "url": "https://www.interconnects.ai/feed",
+        "enabled": true,
+        "category": "ai-deep-dive"
+      },
+      {
+        "name": "智东西",
+        "url": "https://feed.xiaozhushou.net/rss/214e1b00-52c4-11ed-8b1a-59dd7e7e9e99",
+        "enabled": true,
+        "category": "ai-news-zh"
+      },
+      {
+        "name": "机器之心",
+        "url": "https://www.jiqizhixin.com/rss",
+        "enabled": true,
+        "category": "ai-news-zh"
+      },
+      {
+        "name": "36氪 - AI",
+        "url": "https://36kr.com/feed/ai",
+        "enabled": true,
+        "category": "ai-news-zh"
+      }
+    ],
+    "hackernews": {
+      "enabled": true,
+      "fetch_top_stories": 30,
+      "min_score": 80
+    },
+    "reddit": {
+      "enabled": true,
+      "fetch_comments": 5,
+      "subreddits": [
+        {
+          "subreddit": "MachineLearning",
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 30
+        },
+        {
+          "subreddit": "LocalLLaMA",
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 20,
+          "min_score": 20
+        },
+        {
+          "subreddit": "artificial",
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 50
+        },
+        {
+          "subreddit": "ClaudeAI",
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 10
+        },
+        {
+          "subreddit": "OpenAI",
+          "sort": "hot",
+          "time_filter": "day",
+          "fetch_limit": 15,
+          "min_score": 20
+        }
+      ]
+    },
+    "github": [
+      {
+        "type": "user_events",
+        "username": "karpathy",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "openai",
+        "repo": "openai-python",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "anthropics",
+        "repo": "anthropic-sdk-python",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "ggml-ai",
+        "repo": "llama.cpp",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "ollama",
+        "repo": "ollama",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "huggingface",
+        "repo": "transformers",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "vllm-project",
+        "repo": "vllm",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "astral-sh",
+        "repo": "uv",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "microsoft",
+        "repo": "autogen",
+        "enabled": true
+      },
+      {
+        "type": "repo_releases",
+        "owner": "langchain-ai",
+        "repo": "langchain",
+        "enabled": true
+      }
+    ],
+    "telegram": {
+      "enabled": true,
+      "channels": [
+        {
+          "channel": "zaihuapd",
+          "enabled": true,
+          "fetch_limit": 20
+        },
+        {
+          "channel": "aigc_link",
+          "enabled": true,
+          "fetch_limit": 15
+        }
+      ]
+    },
+    "ossinsight": {
+      "enabled": true,
+      "period": "past_24_hours",
+      "languages": ["All", "Python", "TypeScript", "Rust"],
+      "keywords": ["ai", "llm", "agent", "gpt", "claude", "machine learning", "deep learning", "transformer"],
+      "min_stars": 10,
+      "max_items": 30
+    }
+  },
+  "filtering": {
+    "ai_score_threshold": 6.0,
+    "time_window_hours": 24
+  },
+  "webhook": {
+    "enabled": false,
+    "url_env": "HORIZON_WEBHOOK_URL",
+    "delivery": "summary",
+    "platform": "generic",
+    "layout": "markdown"
+  }
+}
